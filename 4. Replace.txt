@@ -1,0 +1,42 @@
+MariaDB [belajar]> select * from mahasiswa_niomic;
++----------+--------------------+---------+-----------------+-----------+
+| nim      | nama               | asal    | jurusan         | nilai_uan |
++----------+--------------------+---------+-----------------+-----------+
+| 17020217 | Irfan Arifin       | Lampung | Kedokteran Gigi |    341.10 |
+| 17080225 | Husli Khairan      | Jakarta | Akuntansi       |    999.99 |
+| 17080305 | Riana Kumaha Sari  | Jakarta | Akuntansi       |    337.99 |
+| 17090113 | Riana Putria       | Padang  | Kimia           |    339.20 |
+| 17090222 | Sari Citra Lestari | Jakarta | Manajemen       |    310.60 |
+| 17090308 | Christie Wijaya    | Medan   | Manajemen       |    321.74 |
+| 17140119 | Sandri Fatmala     | Bandung | Ilmu Komputer   |    322.91 |
+| 17140120 | Bobby Permana      | Medan   | Ilmu Komputer   |    280.82 |
+| 17140133 | Ikhsan Prayoga     | Jakarta | Ilmu Komputer   |    300.16 |
+| 17140143 | Rudi Permana       | Bandung | Ilmu Komputer   |    290.44 |
++----------+--------------------+---------+-----------------+-----------+
+10 rows in set (0.001 sec)
+
+MariaDB [belajar]> replace into mahasiswa_niomic values(
+    -> '17090141',
+    -> 'Lidya Fitriana',
+    -> 'Surabaya',
+    -> 'Kimia',
+    -> '290.54');
+Query OK, 1 row affected (0.006 sec)
+
+MariaDB [belajar]> select * from mahasiswa_niomic;
++----------+--------------------+----------+-----------------+-----------+
+| nim      | nama               | asal     | jurusan         | nilai_uan |
++----------+--------------------+----------+-----------------+-----------+
+| 17020217 | Irfan Arifin       | Lampung  | Kedokteran Gigi |    341.10 |
+| 17080225 | Husli Khairan      | Jakarta  | Akuntansi       |    999.99 |
+| 17080305 | Riana Kumaha Sari  | Jakarta  | Akuntansi       |    337.99 |
+| 17090113 | Riana Putria       | Padang   | Kimia           |    339.20 |
+| 17090141 | Lidya Fitriana     | Surabaya | Kimia           |    290.54 |
+| 17090222 | Sari Citra Lestari | Jakarta  | Manajemen       |    310.60 |
+| 17090308 | Christie Wijaya    | Medan    | Manajemen       |    321.74 |
+| 17140119 | Sandri Fatmala     | Bandung  | Ilmu Komputer   |    322.91 |
+| 17140120 | Bobby Permana      | Medan    | Ilmu Komputer   |    280.82 |
+| 17140133 | Ikhsan Prayoga     | Jakarta  | Ilmu Komputer   |    300.16 |
+| 17140143 | Rudi Permana       | Bandung  | Ilmu Komputer   |    290.44 |
++----------+--------------------+----------+-----------------+-----------+
+11 rows in set (0.001 sec)

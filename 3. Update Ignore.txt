@@ -1,0 +1,30 @@
+MariaDB [belajar]> select * from mahasiswa_niomic;
++----------+--------------------+---------+-----------------+-----------+
+| nim      | nama               | asal    | jurusan         | nilai_uan |
++----------+--------------------+---------+-----------------+-----------+
+| 17020217 | Irfan Arifin       | Lampung | Kedokteran Gigi |    341.10 |
+| 17080225 | Husli Khairan      | Jakarta | Akuntansi       |    288.55 |
+| 17080305 | Riana Kumaha Sari  | Jakarta | Akuntansi       |    337.99 |
+| 17090113 | Riana Putria       | Padang  | Kimia           |    339.20 |
+| 17090222 | Sari Citra Lestari | Jakarta | Manajemen       |    310.60 |
+| 17090308 | Christie Wijaya    | Medan   | Manajemen       |    321.74 |
+| 17140119 | Sandri Fatmala     | Bandung | Ilmu Komputer   |    322.91 |
+| 17140120 | Bobby Permana      | Medan   | Ilmu Komputer   |    280.82 |
+| 17140133 | Ikhsan Prayoga     | Jakarta | Ilmu Komputer   |    300.16 |
+| 17140143 | Rudi Permana       | Bandung | Ilmu Komputer   |    290.44 |
++----------+--------------------+---------+-----------------+-----------+
+10 rows in set (0.000 sec)
+
+MariaDB [belajar]> update ignore mahasiswa_niomic set
+    -> nilai_uan=5000
+    -> where nama='Husli Khairan';
+Query OK, 1 row affected, 1 warning (0.007 sec)
+Rows matched: 1  Changed: 1  Warnings: 1
+
+MariaDB [belajar]> show warnings;
++---------+------+----------------------------------------------------+
+| Level   | Code | Message                                            |
++---------+------+----------------------------------------------------+
+| Warning | 1264 | Out of range value for column 'nilai_uan' at row 2 |
++---------+------+----------------------------------------------------+
+1 row in set (0.000 sec)
